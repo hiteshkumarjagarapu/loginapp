@@ -1,0 +1,27 @@
+.bg {
+  background-color: 'ffffff';
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.bg1 {
+  background-color: linear-gradient(to bottom, #2b2c49, #b5b9ff);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 16px;
+  width: 90%;
+  padding: 24px;
+  height: 90%;
+}
+.heading {
+  color: 'ffffff';
+}
+.but {
+  background-color: 'ffffff';
+  font-family: 'Roboto';
+  color: '303150';
+}
