@@ -1,43 +1,30 @@
 import {Component} from 'react'
 
+import Message from '../Message'
+import Login from '../Login'
+import Logout from '../Logout'
+
 import './index.css'
 
-import Login from '../Login/index'
-
-import Logout from '../Logout/index'
-
-import Message from '../Message/index'
-
 class Home extends Component {
-  state = {v: true}
+  state = {v: false}
 
   a = () => {
-    this.setState(prev => ({v: !prev.v}))
+    this.setState(prevState => ({v: !prevState.v}))
   }
-
-  f1 = () => <Logout />
-
-  f2 = () => <Login />
-
-  f3 = () => <Message />
 
   render() {
     const {v} = this.state
-    const a1 = this.f1()
-    const a2 = this.f2()
-    const a3 = this.f3()
-    const ab = this.a()
 
     return (
-      <div className="bg">
-        <div className="bg1">
-          <h1 className="heading">{a3}</h1>
-
-          {ab && a2}
-          {!ab && a1}
+      <div className="app-container">
+        <div className="home-container">
+          <Message v={v} />
+          {v ? <Logout m={this.a} /> : <Login n={this.a} />}
         </div>
       </div>
     )
   }
 }
+
 export default Home

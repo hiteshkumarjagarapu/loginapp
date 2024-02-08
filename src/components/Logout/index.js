@@ -2,30 +2,13 @@ import {Component} from 'react'
 
 import './index.css'
 
-class Logout extends Component {
-  state = {isLogOut: false}
-
-  b = () => {
-    this.setState(prev => ({isLogOut: !prev.isLogOut}))
-  }
-
-  render() {
-    const {isLogOut} = this.state
-
-    return (
-      <div className="container">
-        {isLogOut ? (
-          <button type="button" className="butt" onClick={this.b}>
-            Login
-          </button>
-        ) : (
-          <button type="button" className="butt" onClick={this.b}>
-            Logout
-          </button>
-        )}
-      </div>
-    )
-  }
+const Logout = props => {
+  const {m} = props
+  return (
+    <button type="button" className="logout-button" onClick={m}>
+      Logout
+    </button>
+  )
 }
 
 export default Logout

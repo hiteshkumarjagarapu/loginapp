@@ -1,6 +1,4 @@
-.head {
-  color: 'ffffff';
-}
-.cont {
-  color: '303150';
-}
+.message {
+  color: #ffffff;
+  font-size: 32px;
+  font-family: 'Roboto';
